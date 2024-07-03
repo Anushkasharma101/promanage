@@ -1,0 +1,77 @@
+.analyticsMainDiv {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 3%;
+}
+
+.analyticsTitle {
+  width: 100%;
+  height: 5%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 150%;
+  font-weight: 600;
+  line-height: 29.96px;
+  margin-top: 5%;
+}
+
+.analyticsParentDiv {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  gap: 2%;
+  margin-left: 2%;
+  margin-top: 4%;
+}
+
+.analyticsDiv {
+  width: 100%;
+  height: 100%;
+  background-color: #f9fcff;
+  padding: 3%;
+}
+.taskslist {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  padding: 0%;
+  margin: 0%;
+}
+.tasks {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 120%;
+  font-weight: 400;
+  line-height: 24.51px;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.tasks::before {
+  content: "\2022";
+  margin: 0;
+  display: inline-block;
+  font-size: 250%;
+  margin-right: 2%;
+  color: #90c4cc;
+}
+
+.analyticsTask {
+  width: 80%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+.analyticsTaskCount {
+  display: inline;
+  width: 20%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 130%;
+  font-weight: 600;
+  line-height: 27.24px;
+  text-align: left;
+}

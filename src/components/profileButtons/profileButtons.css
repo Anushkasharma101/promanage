@@ -1,0 +1,12 @@
+.profileButton {
+  width: 90%;
+  height: 8%;
+  border-radius: 55.13px;
+  border: 1.38px solid #17A2B8;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 26.28px;
+  text-align: center;
+  cursor: pointer;
+}

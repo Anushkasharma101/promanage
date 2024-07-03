@@ -1,0 +1,331 @@
+.publicMainPage {
+  width: 100%;
+  height: 100%;
+}
+
+.proManagePublicPage {
+  width: 20%;
+  height: 4%;
+  margin-top: 2%;
+  display: flex;
+  gap: 5%;
+}
+
+.titlePublicPage {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.parentPublicPageCenterDiv {
+  width: 100%;
+  max-height: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.publicPageCenterDiv {
+  width: 30%;
+  height: 100%;
+  padding: 2%;
+  border: 2px solid #edf5fe;
+  border-radius: 12px;
+
+}
+
+.commonPublicTaskDiv {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  gap: 1%;
+  align-items: center;
+  padding: 1.5% 1.5% 1.5% 0%;
+}
+
+.taskPublicPage {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #707070;
+}
+
+.heroSectionPublicPage {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+  text-align: left;
+}
+
+.checkList {
+  width: 100%;
+  height: 5%;
+  margin-top: 7%;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  text-align: left;
+}
+
+.optionsListPublicDiv{
+  width: 100%;
+  height: 40%;
+  margin-top: 2%;
+  overflow-y: auto;
+}
+
+.optionsListPublicDiv::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.optionsListPublicDiv::-webkit-scrollbar-track {
+  background-color: #fff;
+
+}
+
+.optionsListPublicDiv::-webkit-scrollbar-thumb {
+  background-color: #9cb7c5;
+  border-radius: 10px;
+  border: 1px solid #9CB7C5;
+  
+}
+
+.checkList-item{
+  position: relative;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  padding: 1.5%;
+  margin-bottom: 2%;
+  gap: 2%;   
+}
+
+.publicCheckBox{
+  width: 4.5%;
+  height: 80%; 
+  border-radius: 6px ;
+  padding-top: 1.2%;
+  padding-bottom: 1.2%;
+  padding-left: 0.3%;
+  padding-right: 0.3%;
+  appearance: none;
+  cursor: pointer;
+  border: 2px solid #E2E2E2;
+  background-color: transparent;
+
+}
+
+.publicCheckBox:checked{
+  background-color:#17A2B8 ;
+  border-color: #17A2B8;
+}
+
+.tickImg {
+  position: absolute;
+  margin-left: 0.7%;
+  object-fit: contain;
+}
+
+.checkBoxOptions{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  color: black;
+}
+
+.dateDiv {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  gap: 5%;
+  padding: 1%;
+  margin-top: 2%;
+}
+
+.dueDate {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  width: 22%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cf3636;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5%;
+}
+
+/* @media (max-width: 768px) {
+  .proManagePublicPage {
+    width: 100%;
+    height: 10%;
+    margin-top: 2%;
+    display: block;
+    gap: 2%;
+  }
+
+  .publicPageCenterDiv {
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    border: 2px solid #edf5fe;
+  }
+
+  .heroSectionPublicPage {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+  }
+
+  .checkList {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .checkList-item {
+    height: auto;
+    padding: 2%;
+  }
+
+  .publicCheckBox {
+    width: 10%;
+    height: auto;
+    padding: 0.5%;
+  }
+
+  .checkBoxOptions {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .dateDiv {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2%;
+    padding: 2%;
+  }
+
+  .dueDate {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .date {
+    width: 50%;
+    height: auto;
+    padding: 2%;
+    font-size: 12px;
+    line-height: 14px;
+  }
+} */
+
+@media (max-width: 480px) {
+  .publicMainPage{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+  }
+  .proManagePublicPage {
+    width: 100%;
+    height: 4%;
+    margin-top: 2%;
+    display: flex;
+    gap: 3%;
+    
+  }
+
+  .codesandboxImg{
+    margin-left: 0%;
+  }
+
+  .publicPageCenterDiv {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    border: 2px solid #edf5fe;
+  }
+
+  .heroSectionPublicPage {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .taskPublicPage{
+    width: 30%;
+    height: 100%;
+  }
+
+  .checkList {
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+  }
+
+  .checkList-item {
+    width: 100%;
+    height: 15%;
+    padding: 2%;
+    
+  }
+
+  .publicCheckBox {
+    width: 5%;
+    height: 100%;
+    /* padding: 0.3%; */
+  }
+
+  .checkBoxOptions {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .dateDiv {
+    width: 100%;
+    height: 10%;
+    flex-direction: row;
+    align-items:center;
+    gap: 2%;
+    padding: 2%;
+  }
+
+  .dueDate {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .date {
+    width: 18%;
+    height: auto;
+    padding: 2%;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

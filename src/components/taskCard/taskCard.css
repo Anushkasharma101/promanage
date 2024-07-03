@@ -1,0 +1,184 @@
+.taskCardDiv {
+  width: 100%;
+  min-height: 70%;
+  border-radius: 20px;
+  position: relative;
+  padding: 6%;
+  border: 2px solid #edf5fe;
+  background-color: white;
+}
+
+.taskCardDiv::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  
+}
+
+.taskCardDiv::-webkit-scrollbar-track {
+  width: 13px;
+  appearance: none;
+  background-color: #D6EAF4 !important;
+}
+
+.taskCardDiv::-webkit-scrollbar-thumb {
+  background-color: #9cb7c5;
+  border-radius: 10px;
+}
+
+.taskHeaderDetails {
+  width: 100%;
+  height: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priorityDiv {
+  width: 53%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.priorityText {
+  width: 90%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 60%;
+  font-weight: 500;
+  line-height: 12px;
+  color: #707070;
+}
+
+.assignedEmail {
+  font-family: "DM Sans", sans-serif;
+  font-size: 50%;
+  font-weight: 400;
+  line-height: 9.11px;
+  letter-spacing: 0.5px;
+  color: #000;
+  padding: 3%;
+  width: 10%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffebeb;
+}
+
+.taskDetails {
+  width: 100%;
+  height: 96%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+}
+
+.taskName {
+  width: 100%;
+  height: 10%;
+  font-family: "Poppins", sans-serif;
+  font-size: 140%;
+  font-weight: 500;
+  line-height: 27px;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.commonCheckListDiv {
+  width: 100%;
+  height:8% ;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.checklistTaskDiv {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 80%;
+  font-weight: 500;
+  line-height: 16.94px;
+  color: #000;
+}
+
+
+
+.downArrowImg {
+  border-radius: 3.2px;
+  padding: 1.5%;
+  background-color: #eeecec;
+  cursor: pointer;
+}
+.menuBox {
+  border-radius: 12px;
+  box-shadow: 0px 2px 22px 0px #7e7a7a40;
+  border: #000;
+  width: 40%;
+  height: 32%;
+  padding: 4%;
+  font-family: "Poppins", sans-serif;
+  font-size: 90%;
+  font-weight: 500;
+  line-height: 21px;
+  position: absolute;
+  z-index: 1;
+  background-color: #FFF;
+  right: 5%;
+  top: 10%;
+  
+}
+
+.menuItem{
+    cursor: pointer;
+    margin-bottom: 10%;
+}
+
+.menuItem:hover{
+   color: #CF3636;
+}
+
+.threeDots{
+  cursor: pointer;
+}
+
+.taskOptionDiv{
+   width: 100%;
+   max-height: 72%;
+   
+}
+
+.categoryTaskButtons {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+}
+
+
+.taskButtonFirstDiv{
+  width: 21%;
+  height: 100%;
+}
+
+.taskButtonSecondDiv{
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstDiv,.secondDiv,.thirdDiv{
+  width: 30%;
+  height: 100%;
+}
+
+

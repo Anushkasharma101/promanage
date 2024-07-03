@@ -1,0 +1,75 @@
+.parentDiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.leftDiv {
+  width: 60%;
+  height: 100%;
+  background-color: #17a2b8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightDiv {
+  width: 40%;
+  height: 100%;
+}
+
+.logoimgDiv {
+  width: 53%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circleImg {
+  position: absolute;
+  transform: translateY(-40px) translateX(8px);
+}
+
+.logoImg {
+  position: absolute;
+}
+
+.textline1 {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 180%;
+  font-weight: 600;
+  line-height: 66.15px;
+  color: white;
+}
+
+.textline2 {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 110%;
+  font-weight: 400;
+  line-height: 38.59px;
+  text-align: center;
+  color: white;
+}
+
+/* .Toastify__toast-container {
+  width: 320px; 
+  height: 320px; 
+}
+
+.Toastify__toast-container--top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+} */

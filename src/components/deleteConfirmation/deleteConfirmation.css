@@ -1,0 +1,42 @@
+.deleteConfirmationMainDiv {
+  width: 100%;
+  height: 100%;
+  background: #303d438c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.deleteConfirmationDiv {
+  width: 25%;
+  height: 30%;
+  background-color: #fff;
+  padding: 2%;
+  display: flex;
+  border-radius: 10.91px;
+  flex-direction: column;
+ 
+}
+
+.deleteText {
+  width: 100%;
+  height: 20%;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 100%;
+  font-weight: 600;
+  line-height: 19.07px;
+  text-align: center;
+}
+
+.buttonView {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  margin-top: 5%;
+}

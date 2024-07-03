@@ -1,0 +1,106 @@
+.settingsMainDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.settingsTitle {
+  width: 100%;
+  height: 5%;
+  margin-top: 5%;
+  margin-left: 2%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 160%;
+  font-weight: 600;
+  line-height: 29.96px;
+  text-align: left;
+}
+
+.settingsPrimaryDiv {
+  width: 30%;
+  height: 50%;
+  margin-top: 3%;
+  margin-left: 2%
+}
+
+.nameAnalyticsDiv {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    border: 1.38px solid #d0d0d0;
+    width: 90%;
+    height: 5%;
+    padding: 1%;
+    border-radius: 11.03px;
+    
+  }
+  
+  .nameAnalyticsText {
+    border: none;
+    width: 100%;
+    height: 50%;
+    padding: 1%;
+    outline: none;
+  }
+  
+  .emailAnalyticsDiv {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    border: 1.38px solid #d0d0d0;
+    width: 90%;
+    height: 5%;
+    padding: 1%;
+    border-radius: 11.03px;
+    margin-top: 5%;
+  }
+  
+  .emailAnalyticsText {
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    outline: none;
+  }
+  
+  .oldpasswordDiv {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    border: 1.38px solid #d0d0d0;
+    width: 90%;
+    height: 10%;
+    padding: 1%;
+    border-radius: 11.03px;
+    margin-top: 3%;
+  }
+  
+  .oldcommonPasswordDiv {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .newpasswordDiv {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    border: 1.38px solid #d0d0d0;
+    width: 90%;
+    height: 10%;
+    padding: 1%;
+    border-radius: 11.03px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+  
+  .newcommonPasswordDiv {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .oldpasswordText,.newpasswordText{
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  

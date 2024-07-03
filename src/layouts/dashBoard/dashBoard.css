@@ -1,0 +1,201 @@
+.dashBoardMainDiv {
+  width: 100%;
+  height: 100%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  width: 100%;
+  height: 5%;
+  font-family: "Poppins", sans-serif;
+  font-size: 150%;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.userDashBoardDate {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: flex-end;
+  color: #707070;
+  font-family: "Poppins", sans-serif;
+  font-size: 130%;
+  font-weight: 500;
+  line-height: 30px;
+  margin-top: 1%;
+}
+
+.boardTitleMainDiv {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  margin-top: 1%;
+}
+
+.commonDashBoardDiv {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+
+.boardDashBoard {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 180%;
+  font-weight: 500;
+  line-height: 43.5px;
+  padding: 2%;
+}
+
+.addPeopleDashBoardDiv {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  gap: 5%;
+  cursor: pointer;
+}
+
+.addPeopleDashboardText {
+  font-family: "Poppins", sans-serif;
+  font-size: 100%;
+  font-weight: 500;
+  line-height: 21px;
+  color: #707070;
+}
+
+.taskFilters {
+  width: 12%;
+  height: 100%;
+}
+.filterDropDown {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 120%;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: black;
+}
+
+.taskDashBoardListMainDiv {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  padding: 1%;
+  margin-top: 2%;
+}
+
+.taskDashBoardList {
+  width: auto;
+  height: 100%;
+  display: flex;
+  gap: 2%;
+  overflow-x: auto;
+}
+
+.taskDashBoardList::-webkit-scrollbar {
+  width: 1212px;
+  height:10px ;
+}
+
+.taskDashBoardList::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.taskDashBoardList::-webkit-scrollbar-thumb {
+  background-color: #9cb7c5;
+  border-radius: 10px;
+}
+
+
+
+.taskCategory {
+  min-width: 28%;
+  height: 100%;
+  background-color: #eef2f5;
+  padding: 1%;
+  border-radius: 10px;
+  
+}
+
+.categoryTitle {
+  width: 100%;
+  height: 8%;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categoryBacklog,
+.categoryTodo,
+.categoryInprogress,
+.categoryDone {
+  font-family: "Poppins", sans-serif;
+  font-size: 120%;
+  font-weight: 500;
+  line-height: 24px;
+  color: #000;
+}
+
+.commonIconGroup {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.dashboardTasks {
+  width: 100%;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  overflow-y: auto;
+  padding: 3%;
+}
+
+.dashboardTasks::-webkit-scrollbar {
+  width: 10px;
+  height: 20px;
+}
+
+.dashboardTasks::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.dashboardTasks::-webkit-scrollbar-thumb {
+  background-color: #9cb7c5;
+  border-radius: 10px;
+  height: 400px;
+}
+
+.commonCategoryGroup {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.addTaskImg {
+  width: 70%;
+  height: 70%;
+  cursor: pointer;
+}

@@ -1,0 +1,405 @@
+.createTaskMainDiv {
+  width: 100%;
+  height: 100%;
+  background: #303d438c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.createTaskCenterDiv {
+  position: relative;
+  width: 50%;
+  height: 80%;
+  background-color: white;
+  border-radius: 22px;
+  padding: 3%;
+  overflow: hidden;
+}
+
+.createTaskTitle {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+
+.commonTitleDiv {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  gap: 0.5%;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #20102b;
+}
+
+.asterisk {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #ff0000;
+}
+
+.createTaskTitleDiv {
+  width: 100%;
+  height: 70%;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+}
+
+.taskTitleName {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #9b959f;
+  padding: 1%;
+}
+
+.selectPriorityDiv {
+  width: 100%;
+  height: 10%;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+}
+
+.commonSelectPriorityDiv {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+}
+
+.selectPriority {
+  width: 62%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.createTaskPriorityDiv {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.priorityItem {
+  width: 40%;
+  display: flex;
+  gap: 3%;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  /* padding-top: 0.2%;
+  padding-bottom: 0.2%; */
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor: pointer;
+  margin-right: 2%;
+}
+
+.createTaskpriorityText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: #767575;
+}
+
+.createTaskAssignEmail {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  margin-top: 2%;
+}
+
+.assignToText {
+  width: 12%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #20102b;
+}
+
+.createTaskAssignEmailDiv {
+  width: 88%;
+  height: 100%;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0px 1px 2px 0px #4d40551a;
+  border-radius: 4px;
+}
+
+.assignedEmailText {
+  width: 95%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 1%;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #9b959f;
+}
+
+.createuparrownImg{
+  cursor: pointer;
+}
+
+.createTaskChecklist {
+  width: 100%;
+  height: 5%;
+  margin-top: 2%;
+}
+
+.commoncreateTaskChecklist {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+
+.createTaskChecklistText {
+  width: 63%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #20102b;
+}
+
+.addNewDiv {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+  
+}
+
+.addNewImg {
+  width: 5%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.addNew {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #767575;
+  cursor: pointer;
+}
+
+.createTaskOptionDiv {
+  width: 100%;
+  height: 40%;
+}
+
+.optionsContainer {
+  width: 100%;
+  height: auto;
+  max-height: calc(100% - 10px);
+  margin-top: 2%;
+  overflow-y: auto;
+}
+
+.optionsContainer::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+.optionsContainer::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.optionsContainer::-webkit-scrollbar-thumb {
+  background-color: #9cb7c5;
+  border-radius: 10px;
+}
+
+.bottomButtons {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.selectDueDateDiv {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bottomButtonsGroup {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  gap: 3%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.calenderDiv {
+  position: absolute;
+}
+
+.parentEmailDiv{
+  width: 75%;
+  height: 35%;
+  position: absolute;
+  margin-top: 27%;
+  margin-left: 13%;
+  border-radius: 4px;
+  padding: 1%;
+  border: 1px solid #7e7a7a14;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.emailDropdown {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 1%;
+  gap: 2%; 
+  overflow-y: auto;
+}
+
+.emailDropdown::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.emailDropdown::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.emailDropdown::-webkit-scrollbar-thumb {
+  background-color: #9cb7c5;
+  border-radius: 10px;
+}
+
+.emailDropdownItem {
+  width: 100%;
+  min-height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.dropDownEmail {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  gap: 5%;
+  align-items: center;
+}
+
+.assignEmailDiv {
+  width: 30%;
+  height: 90%;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.formattedEmail {
+  width: 10%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #000;
+}
+
+.fullEmail {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #20102B;
+  
+}
+
+.react-calendar {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 27%;
+}
+
+.dotImages{
+  width: 5%;
+  height: 100%;
+}
