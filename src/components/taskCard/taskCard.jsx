@@ -76,7 +76,7 @@ const TaskCard = ({
 
   const handleShare = () => {
     navigator.clipboard
-      .writeText(`http://localhost:3000/publicPage/${_id}`)
+      .writeText(`https://promanage-one.vercel.app/publicPage/${_id}`)
       .then(() => {
         console.log("Text copied to clipboard successfully");
       })
