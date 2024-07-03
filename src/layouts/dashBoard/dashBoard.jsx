@@ -236,7 +236,7 @@ const DashBoard = ({
           <div className="boardDashBoard">Board</div>
           <div className="addPeopleDashBoardDiv" onClick={handleAddPeople}>
             <img
-              src="assets/Add People.svg"
+              src="/assets/Add People.svg"
               alt="addpeople"
               className="addPeopleDashBoardImg"
             />
@@ -272,7 +272,7 @@ const DashBoard = ({
                 <div className="commonCategoryGroup">
                   {category === "todo" && (
                     <img
-                      src="/assets/add.svg"
+                      src="/assets/Add.svg"
                       alt="addTask"
                       className="addTaskImg"
                       onClick={handleAddTaskClick}
