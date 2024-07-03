@@ -245,11 +245,11 @@ const DashBoard = ({
         </div>
         <div className="taskFilters">
           <select onChange={(e) => handleFilterChange(e.target.value)} className="filterDropDown">
-            <option  value="today" className="dropDownOption">
-              Today
-            </option>
             <option value="thisWeek" className="dropDownOption">
               This week
+            </option>
+            <option  value="today" className="dropDownOption">
+              Today
             </option>
             <option value="thisMonth" className="dropDownOption">
               This Month
