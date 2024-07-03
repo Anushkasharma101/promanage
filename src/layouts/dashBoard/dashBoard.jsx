@@ -272,14 +272,14 @@ const DashBoard = ({
                 <div className="commonCategoryGroup">
                   {category === "todo" && (
                     <img
-                      src="assets/add.svg"
+                      src="/assets/add.svg"
                       alt="addTask"
                       className="addTaskImg"
                       onClick={handleAddTaskClick}
                     />
                   )}
                  <img
-                    src="assets/codicon_collapse-all.svg"
+                    src="/assets/codicon_collapse-all.svg"
                     alt="collapseimg"
                     className={`collapseImg ${
                       tasks[category].length === 0 ? "disabled" : ""
