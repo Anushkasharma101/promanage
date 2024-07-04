@@ -61,7 +61,7 @@
 
 .addPeopleDashBoardDiv {
   width: 50%;
-  height: 60%;
+  height: 80%;
   display: flex;
   gap: 5%;
   cursor: pointer;
@@ -78,18 +78,31 @@
 .taskFilters {
   width: 12%;
   height: 100%;
+  text-align: left;
 }
 .filterDropDown {
   width: 100%;
   height: 100%;
   border: none;
   outline: none;
+  color: black;
   font-family: "Poppins", sans-serif;
   font-size: 120%;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: center;
-  color: black;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: #000;
+}
+
+.dropDownOption {
+  width: 100%;
+  height: 10%;
+  font-family: "Poppins", sans-serif;
+  font-size: 90%;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: #000;
 }
 
 .taskDashBoardListMainDiv {
@@ -110,7 +123,7 @@
 
 .taskDashBoardList::-webkit-scrollbar {
   width: 1212px;
-  height:10px ;
+  height: 10px;
 }
 
 .taskDashBoardList::-webkit-scrollbar-track {
@@ -122,15 +135,12 @@
   border-radius: 10px;
 }
 
-
-
 .taskCategory {
   min-width: 28%;
   height: 100%;
   background-color: #eef2f5;
   padding: 1%;
   border-radius: 10px;
-  
 }
 
 .categoryTitle {

@@ -20,15 +20,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 7%;
+  padding: 5%;
   
 }
 .proManageCenterDiv{
-  width: 85%;
+  width: 80%;
   height: 100%;
   display: flex;
   gap: 5%;
-  margin-left: 10%;
+  margin-left: 0%;
 }
 
 .navLink{

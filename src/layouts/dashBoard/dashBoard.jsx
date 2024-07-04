@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./dashBoard.css";
 import TaskCard from "../../components/taskCard/taskCard";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const filterTasksByDate = (tasks, timeRange) => {
   const today = new Date();
@@ -49,8 +51,10 @@ const DashBoard = ({
   setOldTitle,
   setOldSelectedPriority,
   setOldIndexofPriority,
-  setDueDate
+  setDueDate,
+  isLoading
 }) => {
+  
   const [username, setUserName] = useState("");
   const [tasks, setTasks] = useState({
     backlog: [],
@@ -80,6 +84,7 @@ const DashBoard = ({
             },
           }
         );
+        
         const data = response.data;
         setTodoTasks(data.todo.length);
         setBacklogTasks(data.backlog.length);
@@ -227,8 +232,22 @@ const DashBoard = ({
     }
   };
 
+  const [shareToast, setShareToast] = useState(false);
+
+  useEffect(() => {
+    if (shareToast) {
+      toast.success("Link Copied");
+      setShareToast(false);
+    }
+  }, [shareToast]);
+
+  const handleShareToast = () => {
+    setShareToast(true);
+  };
+
   return (
     <div className="dashBoardMainDiv">
+    <ToastContainer position="top-right"/>
       <div className="userName">Welcome! {username}</div>
       <div className="userDashBoardDate">{getCurrentDate()}</div>
       <div className="boardTitleMainDiv">
@@ -311,6 +330,7 @@ const DashBoard = ({
                     setOldIndexofPriority={setOldIndexofPriority}
                     setCreateTask={setCreateTask}
                     setDueDate={setDueDate}
+                    handleShareToast={handleShareToast}
                   />
                 ))}
               </div>

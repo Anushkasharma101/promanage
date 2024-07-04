@@ -5,6 +5,9 @@ import CommonButton from "../../components/commonButton/commonButton";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { InfinitySpin } from "react-loader-spinner";
 
 const priorityTexts = {
   "HIGH PRIORITY": "HIGH PRIORITY",
@@ -26,7 +29,6 @@ const CreateTask = ({
   oldSelectedEmail = null,
   oldTitle = "",
   oldSelectedPriority = "",
-  oldIndexofPriority = 0,
   setOldOptions,
   setOldTotalCheck,
   setOldSelectedEmail,
@@ -35,12 +37,11 @@ const CreateTask = ({
   setOldIndexOfPriority,
   taskId = "",
   setTaskId,
-  dueDate ="Select Due Date",
+  dueDate = "Select Due Date",
   setDueDate,
-  
 }) => {
   const [options, setOptions] = useState(oldOptions);
-  const [totalCheck, setTotalCheck] = useState(0);
+  const [totalCheck, setTotalCheck] = useState(oldTotalCheck);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [startDate, setStartDate] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -48,6 +49,7 @@ const CreateTask = ({
   const [title, setTitle] = useState(oldTitle);
   const [selectedPriority, setSelectedPriority] = useState(oldSelectedPriority);
   const [indexOfPriority, setIndexOfPriority] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const handleSelectDueDate = () => {
     setIsCalendarOpen(true);
@@ -73,26 +75,25 @@ const CreateTask = ({
   };
 
   useEffect(() => {
-    if(taskId!==""){
-      let counter=0;
-      for(let i = 0; i <oldOptions.length; i++){
-        if(oldOptions[i].checked === true){
-         counter++;
+    if (taskId !== "") {
+      let counter = 0;
+      for (let i = 0; i < oldOptions.length; i++) {
+        if (oldOptions[i].checked === true) {
+          counter++;
         }
       }
 
       setTotalCheck(counter);
     }
   }, [taskId, oldOptions]);
-  
 
   const handleCancel = () => {
     setOldOptions([]);
     setOldTotalCheck(0);
     setOldSelectedEmail(null);
     setOldTitle("");
-    setTaskId('');
-    setDueDate('Select Due Date');
+    setTaskId("");
+    setDueDate("Select Due Date");
     setOldSelectedPriority("");
     setOldIndexOfPriority(oldSelectedPriority);
     setCreateTask(false);
@@ -105,7 +106,8 @@ const CreateTask = ({
         {
           title,
           checkList: options,
-          dueDate: startDate === null ? null : startDate.toLocaleDateString("en-GB"),
+          dueDate:
+            startDate === null ? null : startDate.toLocaleDateString("en-GB"),
           assignedTo: selectedEmail,
           priority: selectedPriority,
         },
@@ -122,9 +124,22 @@ const CreateTask = ({
       console.error("Error updating task:", error);
     }
   };
-  
+
   const handleSave = async () => {
+    if (!title) {
+      toast.error("Please Enter Title");
+      return;
+    }
+    if (!selectedPriority) {
+      toast.error("Please Select Priority");
+      return;
+    }
+    if (options.length === 0) {
+      toast.error("Please Add Tasks");
+      return;
+    }
     const userToken = localStorage.getItem("token");
+    setLoading(true);
     try {
       const updatedList = options.map((option) => ({
         checkListTitle: option.checkListTitle,
@@ -138,19 +153,18 @@ const CreateTask = ({
           priority: priorityTexts[indexOfPriority],
           checkList: updatedList,
           assignedTo: selectedEmail === "" ? null : selectedEmail,
-          dueDate: startDate === "Select Due Date"? null : startDate,
-         
+          dueDate: startDate === "Select Due Date" ? null : startDate,
         },
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${userToken}`, 
+            Authorization: `Bearer ${userToken}`,
           },
         }
       );
 
       console.log("Task Successfully Created", response.data);
-      handleCancel() // Navigate to a different route on success
+      handleCancel(); // Navigate to a different route on success
       window.location.reload();
     } catch (error) {
       console.error(
@@ -158,10 +172,34 @@ const CreateTask = ({
         error.response ? error.response.data : error.message
       );
     }
+    setLoading(false);
   };
 
   return (
     <div className="createTaskMainDiv">
+      <ToastContainer position="top-center" />
+      {loading && (
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1000,
+          }}
+        >
+          <InfinitySpin
+            visible={true}
+            width="200"
+            color="#4fa94d"
+            ariaLabel="infinity-spin-loading"
+          />
+        </div>
+      )}
       <div className="createTaskCenterDiv">
         {isCalendarOpen && (
           <Calendar onChange={handleDateChange} value={startDate} />
@@ -224,11 +262,13 @@ const CreateTask = ({
                   setIndexOfPriority(key);
                 }}
               >
-                <img
-                  src={priorityImages[key]}
-                  alt={`${key} priority`}
-                  className="priority-icon"
-                />
+                <div className="createTaskPriorityImageDiv">
+                  <img
+                    src={priorityImages[key]}
+                    alt={`${key} priority`}
+                    className="priority-icon"
+                  />
+                </div>
 
                 <div className="createTaskpriorityText">
                   {priorityTexts[key]}
@@ -295,10 +335,10 @@ const CreateTask = ({
           <div className="selectDueDateDiv">
             <CommonButton
               text={
-                dueDate === 'Select Due Date' ?
-                startDate
-                  ? startDate.toLocaleDateString("en-GB")
-                  : "Select Due Date"
+                dueDate === "Select Due Date"
+                  ? startDate
+                    ? startDate.toLocaleDateString("en-GB")
+                    : "Select Due Date"
                   : dueDate
               }
               textColor={"#707070"}
@@ -323,10 +363,9 @@ const CreateTask = ({
               buttonColor={"#17A2B8"}
               border={"#17A2B8"}
               boxshadow={"none"}
-              onClick={()=>
-              {taskId!==''? updateTask(): handleSave()}
-              
-              }
+              onClick={() => {
+                taskId !== "" ? updateTask() : handleSave();
+              }}
             />
           </div>
         </div>

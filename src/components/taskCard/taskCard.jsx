@@ -4,6 +4,7 @@ import Optionslist from "../optionsList/optionsList";
 import Category from "../category/category";
 import axios from "axios";
 
+
 const priorityImages = {
   "HIGH PRIORITY": "assets/redcircle.svg",
   "MODERATE PRIORITY": "assets/bluecircle.svg",
@@ -23,7 +24,8 @@ const TaskCard = ({
   setOldTitle,
   setOldSelectedPriority,
   setOldIndexofPriority,
-  setDueDate
+  setDueDate,
+  handleShareToast
 }) => {
   const {
     _id,
@@ -61,6 +63,8 @@ const TaskCard = ({
     }
   };
 
+  
+
   const handleEdit = () => {
     setOldOptions(checkList);
     setOldTotalCheck(checklistCompleted);
@@ -71,7 +75,15 @@ const TaskCard = ({
     setCreateTask(true);
     setDueDate(dueDate);
     setTaskId(_id);
+    setOpenMenuTaskId(null);
+    
+  };
 
+  const isPastDueDate = (dueDate) => {
+    if (!dueDate) return false;
+    const currentDate = new Date();
+    const taskDueDate = new Date(dueDate);
+    return taskDueDate < currentDate;
   };
 
   const handleShare = () => {
@@ -79,15 +91,18 @@ const TaskCard = ({
       .writeText(`https://promanage-one.vercel.app/publicPage/${_id}`)
       .then(() => {
         console.log("Text copied to clipboard successfully");
+        handleShareToast();
       })
       .catch((err) => {
         console.error("Failed to copy text to clipboard: ", err);
       });
+      setOpenMenuTaskId(null);
   };
 
   const handleDelete = () => {
     setIsDeleting(true);
     setTaskId(_id);
+    setOpenMenuTaskId(null);
   };
 
   const getFormattedDate = (dateString) => {
@@ -131,7 +146,6 @@ const TaskCard = ({
             <div className="assignedEmail">{assignedInitials}</div>
           )}
         </div>
-        {/* <div className="menuParentDiv"> */}
         <img
           src="assets/threedots.svg"
           alt="threedots"
@@ -177,8 +191,8 @@ const TaskCard = ({
           <div className="taskButtonFirstDiv">
           {task.dueDate && (
               <Category
-                priorityBgColor={category === 'Done' ? "#63C05B" : "#DBDBDB"}
-                priorityTextColor={category === 'Done' ? "#FFFFFF" : "#5A5A5A"}
+                priorityBgColor={isPastDueDate(dueDate) ? '#CF3636' : (category === 'Done' ? "#63C05B" : "#DBDBDB")}
+                priorityTextColor={isPastDueDate(dueDate) ? '#FFFFFF' : (category === 'Done' ? "#FFFFFF" : "#5A5A5A")}
                 prioritytext={getFormattedDate(task.dueDate)}
                 onClick={() => {}}
               />

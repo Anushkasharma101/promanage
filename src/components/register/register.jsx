@@ -17,6 +17,7 @@ const Register = ({ setIsLoggedIn, setIsLogin,notify,setLoading }) => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [confirmPasswordError, setConfirmPasswordError] = useState(false);
+  const [passwordMatch,setPasswordMatch] = useState(false);
 
   
   const togglePasswordVisibility = () => {
@@ -59,11 +60,11 @@ const Register = ({ setIsLoggedIn, setIsLogin,notify,setLoading }) => {
     }
 
     if (password !== confirmPassword) {
-      setConfirmPasswordError(true);
+      setPasswordMatch(true);
       valid = false;
       toast.error("Passwords do not match");
     } else {
-      setConfirmPasswordError(false);
+      setPasswordMatch(false);
     }
 
     if (valid) {
@@ -131,14 +132,8 @@ const Register = ({ setIsLoggedIn, setIsLogin,notify,setLoading }) => {
           <div className="confirmcommonPasswordDiv">
             <input
               type={confirmPasswordVisible ? "text" : "password"}
-              placeholder={
-                confirmPasswordError
-                  ? "Please enter Confirm Password"
-                  : "Confirm Password"
-              }
-              className={
-                confirmPasswordError ? "inputError" : "confirmPasswordText"
-              }
+              placeholder={confirmPasswordError ? "Please enter Confirm Password": "Confirm Password"}
+              className={confirmPasswordError ? "inputError" : "confirmPasswordText"}
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />

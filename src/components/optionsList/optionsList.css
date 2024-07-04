@@ -24,7 +24,7 @@
 .option-item {
   position: relative;
   width: 100%;
-  min-height: 25%;
+  min-height: 20%;
   height: 10%;
   display: flex;
   align-items: center;
@@ -38,6 +38,9 @@
 
 .inputCheckBox {
   height: 70%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 6px ;
   border: 2px solid #E2E2E2; 
   padding-top: 1.2%;
@@ -57,7 +60,7 @@
 
 .tickImg {
   position: absolute;
-  margin-left: 0.5%;
+  /* margin-left: 0.5%; */
   object-fit: contain;
 }
 
@@ -67,7 +70,7 @@
   border: none;
   outline: none;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 100%;
   font-weight: 500;
   line-height: 16.94px;
   color: black;

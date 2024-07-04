@@ -17,7 +17,7 @@ console.log('token',localStorage.getItem('token'));
       });
       window.location.reload();
       console.log('Task deleted:', response.data);
-      setShowDeleteToast(true);
+      
     } catch (error) {
       console.error('Error deleting task:', error);
       toast.error('Failed to Delete Task');
